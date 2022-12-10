@@ -1,0 +1,235 @@
+.footer-section {
+  padding: 60px 0;
+
+  background-color: var(--background-color);
+}
+
+.footer-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-adress-contacts {
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
+
+.footer-tablet-links {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 94px;
+    margin-bottom: 0;
+  }
+}
+
+.adress-list {
+  margin-top: 28px;
+  font-style: normal;
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 20px;
+  }
+}
+
+.footer-list__item {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer-list__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  color: var(--footer-text-second-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+
+.footer-list__link--white {
+  color: var(--footer-text-first-color);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+}
+
+.footer-social-links {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.footer-links-title,
+.footer-sign-up-title {
+  padding-bottom: 20px;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--footer-text-first-color);
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+    padding-top: 12px;
+  }
+}
+
+.footer-links-title {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-top: 5px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 0px;
+  }
+}
+
+.footer-networks {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-networks {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.social-networks__item {
+  width: 44px;
+  height: 44px;
+}
+
+.social-networks__links {
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--footer-text-first-color);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--brand-color);
+  }
+}
+
+.social-networks__icon {
+  fill: currentColor;
+}
+
+.sign-up {
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    display: inline-flex;
+  }
+}
+
+.sign-up__input-field {
+  display: inline-flex;
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  width: 100%;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+  color: var(--footer-text-first-color);
+  background-color: transparent;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
+
+    color: var(--footer-text-second-color);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--brand-color);
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+.sign-up__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+
+  color: var(--footer-text-first-color);
+  background-color: var(--brand-color);
+  border: 0px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  @media screen and (max-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sign-up__icon-send {
+  margin-left: 10px;
+  fill: currentColor;
+}

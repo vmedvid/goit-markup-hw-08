@@ -1,0 +1,22 @@
+.logo {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+
+.logo__text {
+  color: var(--brand-color-secondary);
+}
+
+.logo__text-footer {
+  color: var(--brand-color-third);
+}
