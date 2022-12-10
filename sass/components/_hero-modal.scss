@@ -28,8 +28,8 @@
   top: 50%;
   left: 50%;
 
-  width: 450px;
-  min-height: 609px;
+  width: 100%;
+  min-height: auto;
 
   background: var(--hero-modal-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -40,6 +40,11 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 450px) {
+    width: 450px;
+    min-height: 609px;
+  }
 
   @media screen and (min-width: $desktop) {
     width: 528px;
@@ -153,9 +158,6 @@
 
 .our-policy label {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 400;
   font-size: 12px;
   line-height: calc(14 / 12);
@@ -163,6 +165,12 @@
 
   color: var(--text-color-secondary);
   overflow: hidden;
+
+  @media screen and (min-width: 450px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -303,7 +311,7 @@ textarea {
 }
 
 .our-policy__checkbox:checked ~ .our-policy__check-icon {
-  display: block;
+  display: inline-block;
   margin-right: 7px;
   width: 16px;
   height: 15px;

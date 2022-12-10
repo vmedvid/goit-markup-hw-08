@@ -298,8 +298,8 @@ header {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1428571429;
+    font-size: 12px;
+    line-height: 1.1666666667;
     letter-spacing: 0.02em;
     color: var(--text-color-secondary);
     -webkit-transition-property: color;
@@ -316,6 +316,8 @@ header {
 @media screen and (min-width: 1200px) {
   .header-contacts__link {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.1428571429;
   }
 }
 
@@ -393,10 +395,16 @@ header {
 }
 
 .mobile-menu {
-  display: block;
   position: fixed;
   top: 0;
   left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   padding: 48px 40px;
@@ -406,17 +414,10 @@ header {
           transform: translateX(-50%);
   z-index: 5;
   background: var(--mobile-menu-background);
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-}
-@media screen and (min-width: 480px) {
-  .mobile-menu {
-    width: 480px;
-  }
 }
 
 .mobile-menu-list {
-  margin-bottom: 306px;
+  margin-bottom: auto;
 }
 
 .mobile-menu-list__item {
@@ -474,6 +475,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -828,7 +831,7 @@ header {
   background-color: var(--background-color);
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-background-mobile.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-background-mobile.jpg");
-  background-size: 480px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -842,7 +845,6 @@ header {
   .hero-section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-background-tablet.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-background-tablet.jpg");
-    background-size: 768px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -1334,8 +1336,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
-  min-height: 609px;
+  width: 100%;
+  min-height: auto;
   background: var(--hero-modal-background);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1350,6 +1352,12 @@ header {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 450px) {
+  .hero-modal {
+    width: 450px;
+    min-height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero-modal {
@@ -1487,21 +1495,25 @@ header {
 
 .our-policy label {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--text-color-secondary);
   overflow: hidden;
+}
+@media screen and (min-width: 450px) {
+  .our-policy label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .our-policy label {
@@ -1673,7 +1685,7 @@ textarea {
 }
 
 .our-policy__checkbox:checked ~ .our-policy__check-icon {
-  display: block;
+  display: inline-block;
   margin-right: 7px;
   width: 16px;
   height: 15px;

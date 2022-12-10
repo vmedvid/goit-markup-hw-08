@@ -11,8 +11,8 @@ header {
 }
 
 .nav-menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .nav-menu__logo {
   @media screen and (min-width: $tablet) {
@@ -129,8 +129,8 @@ header {
     align-items: center;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
     color: var(--text-color-secondary);
 
@@ -146,6 +146,8 @@ header {
 
   @media screen and (min-width: $desktop) {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: calc(16 / 14);
   }
 }
 
