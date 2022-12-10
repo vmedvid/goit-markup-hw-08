@@ -70,7 +70,10 @@
   .portfolio-list__link:hover &,
   .portfolio-list__link:focus & {
     transform: translateY(0);
-    overflow: scroll;
+    
+    @media screen and (max-width: 350px) {
+    overflow-Y: scroll;
+    }
   }
 }
 

@@ -1842,7 +1842,11 @@ textarea {
 .portfolio-list__link:hover .portfolio-list__text, .portfolio-list__link:focus .portfolio-list__text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  overflow: scroll;
+}
+@media screen and (max-width: 350px) {
+  .portfolio-list__link:hover .portfolio-list__text, .portfolio-list__link:focus .portfolio-list__text {
+    overflow-Y: scroll;
+  }
 }
 
 .portfolio-list__caption {
